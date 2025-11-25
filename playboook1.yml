@@ -1,0 +1,8 @@
+---
+- name: Create a file with a dynamic name
+  hosts: all
+  tasks:
+    - name: Create an empty file with the dynamic name
+      ansible.builtin.file:
+        path: "~/nn/{{ my_filename }}.txt"
+        state: touch
